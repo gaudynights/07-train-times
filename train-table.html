@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Conductor Barry's Choo-Choo Chart</title>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+
+    
+</head>
+
+<body>
+	<div class="container">
+    <div class="jumbotron">
+        <h1>Conductor Barry's Choo-Choo Chart!</h1>     
+    </div>
+
+<form class="form-horizontal">
+<fieldset>
+
+<div class="container">
+<!-- Form Name -->
+<legend>Another Choo-choo!</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name-input">Train Name</label>  
+  <div class="col-md-4">
+  <input id="name-input" name="name-input" type="text" placeholder="Barry Express" class="form-control input-md">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="date-input">First Run HH:mm</label>  
+  <div class="col-md-4">
+  <input id="date-input" name="date-input" type="text" placeholder="23:59" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="dest-input">Destination</label>  
+  <div class="col-md-4">
+  <input id="dest-input" name="dest-input" type="text" placeholder="Chattanooga, TN" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="freq-input">Frequency (min)</label>  
+  <div class="col-md-4">
+  <input id="freq-input" name="freq-input" type="text" placeholder="120" class="form-control input-md">
+    
+  </div>
+</div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit-button"></label>
+  <div class="col-md-4">
+    <button id="submit-button" name="submit-button" class="btn btn-primary">Add dat choo-choo!</button>
+  </div>
+</div>
+
+</div>
+</fieldset>
+</form>
+
+    <div class="panel panel-default">
+        <div class=panel-heading>Panel heading</div>
+        <table class=table>
+            <thead>
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>First Run</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id = "worker-table">
+                <!-- <tr>
+                    <td scope=row>1</td>
+                    <td>dest</td>
+                    <td>First Run HH:mm</td>
+                    <td>Months Worked</td>
+                    <td>Monthly freq</td>
+                    <td>Total Billed</td>
+                </tr>
+                <tr>
+                    <td scope=row>2</td>
+                    <td>dest</td>
+                    <td>First Run HH:mm</td>
+                    <td>Months Worked</td>
+                    <td>Monthly freq</td>
+                    <td>Total Billed</td>
+                </tr>
+                <tr>
+                    <td scope=row>3</td>
+                    <td>dest</td>
+                    <td>First Run HH:mm</td>
+                    <td>Months Worked</td>
+                    <td>Monthly freq</td>
+                    <td>Total Billed</td>
+                </tr> -->
+                
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+  <!-- Link to Moment.js should go here -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="assets/javascript.js"></script>
+
+</body>
+</html>
