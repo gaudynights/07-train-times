@@ -1,7 +1,4 @@
-// console.log("pizza");
 
-
-// Initialize Firebase
 
 
   // Initialize Firebase
@@ -58,7 +55,7 @@ database.ref().on("child_added", function(childSnapshot) {
     //log one thing to make sure its working
     console.log(childSnapshot.val().name);
      nextTime= childSnapshot.val().firstTime;
-var monthsWorked=moment().diff(moment(nextTime),'months');
+
 firstTime=childSnapshot.val().firstTime;
 freq=childSnapshot.val().freq;
 
@@ -88,19 +85,13 @@ console.log(freq);
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
-// var now = moment();
-//set next time to first time
-// a loop? saying if nextTime-now is negative, add freq to nextTime and try again
 
 
-// console.log(childSnapshot.val().firstTime);
-
-// console.log(monthsWorked);
     $("#worker-table").append(`
         <tr>
         	<td scope=row>${childSnapshot.val().name}</td>
         	<td>${childSnapshot.val().dest}</td>
-        	<td>${childSnapshot.val().firstTime}</td>
+        	
             <td>${childSnapshot.val().freq}</td>
             <td>${moment(nextTrain).format("hh:mm")}</td>
             <td>${tMinutesTillTrain}</td>
